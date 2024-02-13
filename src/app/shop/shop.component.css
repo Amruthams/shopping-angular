@@ -1,0 +1,3 @@
+.card-body {
+    height: 100%; /* Ensure the card body takes up the full height */
+}

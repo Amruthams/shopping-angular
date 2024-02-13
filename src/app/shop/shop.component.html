@@ -1,0 +1,72 @@
+<div class="row ">
+
+    <div class="row py-1">
+        
+        <div class="col-lg-6 img-fluid  d-flex justify-content-center">
+            <img src="https://i.postimg.cc/vTTZBXJc/6af1ce15101aacb82f8023ffc43862e7-removebg-preview.png" alt="" >
+            
+        </div>
+        <div class="col-lg-6 ">
+            <div class="container p-5 my-5 ">
+                <h3 class="my-4" style="color: purple; ">
+                    
+                    <span id="f" class="fs-1 "><b> Mega Sales Fest!</b></span>
+                    
+                </h3>
+    
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br> Consequatur earum molestias dolor saepe
+                    voluptas eos, <br>repellat voluptatibus maiores minima commodi officia <br>animi odit cupiditate
+                    blanditiis fuga adipisci? At, eaque <br>quasi.</p>
+
+                <button  class="btn btn-outline-light w-50" type="submit" style="background-color: plum;"><b>Shop Now</b></button>
+            </div>
+    
+            
+
+        </div>
+    </div>
+
+
+
+   
+        <div class="row justify-content-center py-5">
+            <div class="ms-4  w-75 mt-5 ">
+                <label for="" class="d-flex border rounded shadow-lg">
+    
+        
+                    <input [(ngModel)]="productName"  name="n1" id="n1"  type="text" class="form-control"   [placeholder]="placeholderData">
+                    <button class="btn btn-outline-light " type="submit" style="background-color: plum; "><b>Search</b></button>
+                    <!-- <i class="fa-solid fa-magnifying-glass fa-bounce fa-2xl py-3" style="color: #a880a3;"></i> -->
+                    
+        
+                </label>
+     
+        
+            </div>
+    
+    
+        <div class="m-5">
+            <div class=" row m-5  ps-5">
+                
+                    
+                        <div *ngFor="let i of productList |search : productName : 'title' " class="card col-lg-3 m-4" style="width: 18rem;"> 
+                            <h4 class="card-title d-flex justify-content-center">{{i.title}}</h4>                          
+                            <a routerLink="single/{{i.id}}" style="text-decoration: none;" class="py-3">
+                                <img [src]="i.image" class="card-img-top" alt="..."  height="200">
+                            </a>
+                            <div class="card-body">
+                              
+                              <h5 class=" d-flex justify-content-center ">{{i.price}}</h5>
+
+                              
+
+                              <p  class="btn btn-outline-dark d-flex justify-content-center  " style="background-color: plum;  ">Add To Cart</p>
+                            </div>
+                          </div>
+                    
+               
+            </div>
+        </div>
+    
+
+</div>
